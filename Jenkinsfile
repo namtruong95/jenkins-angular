@@ -19,6 +19,13 @@ pipeline {
         sh 'yarn run lint'
       }
     }
+
+    stage('pre:build') {
+      steps {
+        sh 'cp src/environments/environment.ts src/environments/environment.prd.ts'
+        sh 'yarn run build --output-path=dist/frontend-prd'
+      }
+    }
   }
 
   post {
