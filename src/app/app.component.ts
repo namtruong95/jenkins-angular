@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  private x = 999999;
+  private x = 33333333;
 }
